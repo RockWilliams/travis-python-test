@@ -16,8 +16,26 @@ class KnowledgeBase(unittest.TestCase):
 
     def test_surface_area_of_cube(self):
         """ area of cube """
-        result = math_functions.surface_area_of_cube(1)
-        expected = 1
+        result = math_functions.surface_area_of_cube(6)
+        expected = 216
+        self.assertEqual(expected, result)
+
+    def test_surface_area_of_cube_half(self):
+        """ area of cube """
+        result = math_functions.surface_area_of_cube(0.5)
+        expected = 1.5
+        self.assertEqual(expected, result)
+
+    def test_surface_area_of_cube_zero(self):
+        """ area of cube """
+        result = math_functions.surface_area_of_cube(0)
+        expected = None
+        self.assertEqual(expected, result)
+
+    def test_surface_area_of_cube_negative(self):
+        """ area of cube """
+        result = math_functions.surface_area_of_cube(-1)
+        expected = None
         self.assertEqual(expected, result)
 
 
